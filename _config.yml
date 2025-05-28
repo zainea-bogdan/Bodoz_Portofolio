@@ -1,7 +1,7 @@
 title: My Jekyll Blog
 baseurl: "" # leave empty for user site
 permalink: /blog/:title/
-
+theme: null
 defaults:
   - scope:
       path: ""
