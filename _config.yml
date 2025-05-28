@@ -1,5 +1,5 @@
 title: My Jekyll Blog
-baseurl: "" # leave empty for user site
+baseurl: "/Bodoz_Portofolio"
 permalink: /blog/:title/
 theme: null
 defaults:
