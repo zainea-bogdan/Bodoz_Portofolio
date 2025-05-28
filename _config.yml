@@ -1,11 +1,6 @@
-title: My Portfolio
-baseurl: "" # Do NOT put "/" here if it's a user/organization site (username.github.io)
-theme: minima
+title: My Jekyll Blog
+baseurl: "" # leave empty for user site
 permalink: /blog/:title/
-
-collections:
-  posts:
-    output: true
 
 defaults:
   - scope:
