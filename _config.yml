@@ -1,3 +1,15 @@
-title: My Portfolio Site
-description: Personal blog and projects
-theme: minima # Or a custom theme
+title: My Portfolio
+baseurl: "" # Do NOT put "/" here if it's a user/organization site (username.github.io)
+theme: minima
+permalink: /blog/:title/
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
