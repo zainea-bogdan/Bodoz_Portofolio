@@ -1,107 +1,66 @@
-/* General Reset and Typography */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* Darker Gradient Background */
 body {
   font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(to bottom right, white, black);
+  background: linear-gradient(to bottom right, #0d0d0d, #1a1a1a);
   color: #fff;
   line-height: 1.6;
 }
 
-/* Section Base */
-.section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 80px 10%;
-  min-height: 100vh;
+/* Subtitle Code Style */
+.code {
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 10px;
 }
 
-/* SECTION 1 */
-.intro .text-left {
-  flex: 1;
+/* Abstract Square with Rounded Corners */
+.abstract-square {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(145deg, #222, #444);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
-.intro h1 {
-  font-size: 4rem;
+/* Blog Section */
+.blog-cta {
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+}
+
+.blog-title {
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-.intro p {
-  font-size: 1.5rem;
-}
-
-.intro .image-right {
-  flex: 1;
-  text-align: right;
-}
-
-.photo {
-  max-width: 300px;
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* SECTION 2 */
-.whoami .image-left {
-  flex: 1;
-}
-
-.abstract-figure {
-  width: 200px;
-  height: 200px;
-  margin: auto;
-  background: radial-gradient(circle, #555, #222);
-  border-radius: 50%;
-}
-
-.whoami .text-right {
-  flex: 1;
-}
-
-.whoami h2 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-}
-
-/* SECTION 3 */
-.blog-cta {
-  justify-content: center;
-}
-
-.blog-button {
-  padding: 15px 30px;
-  background-color: #fff;
-  color: #000;
+.blog-box {
+  display: inline-block;
+  padding: 40px;
+  border: 2px solid #fff;
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
   font-size: 1.2rem;
-  transition: background 0.3s ease;
+  font-weight: bold;
 }
 
-.blog-button:hover {
-  background-color: #ccc;
+.blog-box:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
 }
 
-/* RESPONSIVE LAYOUT */
+/* Maintain Responsiveness */
 @media (max-width: 768px) {
   .section {
     flex-direction: column;
     text-align: center;
   }
 
-  .intro .image-right,
-  .whoami .image-left {
-    margin-top: 40px;
-  }
-
-  .abstract-figure {
+  .abstract-square {
     margin: 30px auto;
   }
 
