@@ -1,0 +1,111 @@
+/* General Reset and Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom right, white, black);
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Section Base */
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  min-height: 100vh;
+}
+
+/* SECTION 1 */
+.intro .text-left {
+  flex: 1;
+}
+
+.intro h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 1.5rem;
+}
+
+.intro .image-right {
+  flex: 1;
+  text-align: right;
+}
+
+.photo {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* SECTION 2 */
+.whoami .image-left {
+  flex: 1;
+}
+
+.abstract-figure {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  background: radial-gradient(circle, #555, #222);
+  border-radius: 50%;
+}
+
+.whoami .text-right {
+  flex: 1;
+}
+
+.whoami h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+/* SECTION 3 */
+.blog-cta {
+  justify-content: center;
+}
+
+.blog-button {
+  padding: 15px 30px;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background 0.3s ease;
+}
+
+.blog-button:hover {
+  background-color: #ccc;
+}
+
+/* RESPONSIVE LAYOUT */
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro .image-right,
+  .whoami .image-left {
+    margin-top: 40px;
+  }
+
+  .abstract-figure {
+    margin: 30px auto;
+  }
+
+  .photo {
+    max-width: 80%;
+  }
+}
