@@ -1,4 +1,10 @@
-/* Darker Gradient Background */
+/* General Reset and Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Segoe UI", sans-serif;
   background: linear-gradient(to bottom right, #0d0d0d, #1a1a1a);
@@ -6,7 +12,26 @@ body {
   line-height: 1.6;
 }
 
-/* Subtitle Code Style */
+/* Section Base */
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  min-height: 100vh;
+}
+
+/* SECTION 1: Intro */
+.intro .text-left {
+  flex: 1;
+}
+
+.intro h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
 .code {
   font-family: "Courier New", monospace;
   font-size: 1rem;
@@ -14,7 +39,25 @@ body {
   margin-top: 10px;
 }
 
-/* Abstract Square with Rounded Corners */
+.intro .image-right {
+  flex: 1;
+  text-align: right;
+}
+
+.photo {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* SECTION 2: WhoAmI */
+.whoami .image-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .abstract-square {
   width: 250px;
   height: 250px;
@@ -23,7 +66,16 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Blog Section */
+.whoami .text-right {
+  flex: 1;
+}
+
+.whoami h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+/* SECTION 3: Blog CTA */
 .blog-cta {
   flex-direction: column;
   text-align: center;
@@ -53,7 +105,7 @@ body {
   transform: scale(1.05);
 }
 
-/* Maintain Responsiveness */
+/* RESPONSIVE LAYOUT */
 @media (max-width: 768px) {
   .section {
     flex-direction: column;
