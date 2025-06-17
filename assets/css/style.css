@@ -167,7 +167,7 @@
 .card-title {
   flex: 1;
   text-transform: initial;
-  font-size: 50px;
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
   font-weight: 500;
   background-color: transparent;
 }
@@ -175,7 +175,7 @@
 .card-subtitle {
   flex: 1;
   text-transform: capitalize;
-  font-size: 20px;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
   font-weight: 300;
   background-color: transparent;
 }
@@ -183,7 +183,7 @@
 .card-info {
   flex: 1;
   background-color: transparent;
-  font-size: 15px;
+  font-size: clamp(0.85rem, 2vw, 1rem);
   font-weight: 400;
 }
 
@@ -192,7 +192,8 @@
   color: white;
   background-color: #8fabba;
   border-radius: 5px;
-  padding: 10px 20px;
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  padding: clamp(8px, 2vw, 12px) clamp(16px, 4vw, 24px);
   text-transform: capitalize;
   font-weight: 500;
   cursor: pointer;
