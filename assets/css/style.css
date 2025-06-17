@@ -9,9 +9,10 @@
 
 .container-section {
   width: 100%;
-  min-height: 300px; /* Ensures minimum height, but grows with content */
+  min-height: 100vh;
+  padding: 40px 0;
   display: flex;
-  flex-wrap: wrap; /* Allows stacking on small screens if needed */
+  flex-wrap: wrap;
 }
 
 .title-section {
@@ -56,21 +57,36 @@
   border-radius: 15px;
 }
 /*transition title section:*/
-.section-title-intermediar {
-  width: 100%;
-  min-height: 100px;
+.section-title-intermediar.has-divider {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
-  padding: 20px 10px;
   text-align: center;
+  padding: 80px 10px; /* More vertical space for the line */
 }
 
-.section-title-intermediar h1 {
+.section-title-intermediar.has-divider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(to bottom, #8fabba, #333);
+  transform: translateX(-50%);
+  z-index: 0;
+  height: 100%; /* or use 80px if you want a shorter line */
+}
+
+.section-title-intermediar.has-divider h1 {
+  position: relative;
   font-size: clamp(1.5rem, 4vw, 3rem);
   font-weight: bold;
   line-height: 1.4;
+  padding: 0 20px;
+  background-color: black; /* mask the line behind the text */
+  z-index: 1;
 }
 
 /*Project sections:*/
@@ -358,6 +374,134 @@
   transform: scale(1.05);
 }
 
+/*roadmap*/
+/* === TIMELINE CONTAINER === */
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0px auto;
+  padding: 2rem 0;
+}
+
+/* === CENTRAL VERTICAL LINE === */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(to bottom, #8fabba, #333);
+  transform: translateX(-50%);
+}
+
+/* === TIMELINE ITEM === */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  margin: 200px 0; /* vertical spacing between cards */
+}
+
+/* === FADE & SLIDE IN === */
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === LEFT AND RIGHT POSITIONING === */
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* === TIMELINE CARD CONTENT === */
+.timeline-item .content {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 20px 25px;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  border-left: 5px solid #8fabba;
+  transition: background-color 0.3s ease;
+}
+
+/* === HEADING STYLES === */
+.timeline .content h3 {
+  margin: 0 0 10px;
+  color: #8fabba;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background-color: transparent;
+}
+
+/* === PARAGRAPH TEXT === */
+.timeline .content p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ccc;
+  background-color: transparent;
+}
+
+/* === BULLET POINTS === */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  width: 14px;
+  height: 14px;
+  background: #8fabba;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item.left::before {
+  right: -7px;
+}
+
+.timeline-item.right::before {
+  left: -7px;
+}
+
+/* === RESPONSIVE STACKING === */
+@media screen and (max-width: 768px) {
+  .timeline::before {
+    left: 50%; /* CENTER the line */
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding: 20px 30px;
+    left: 0 !important;
+    text-align: left;
+  }
+
+  .timeline-item::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .timeline-item::before {
+    content: none; /* disables the circle */
+  }
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0 !important;
+    text-align: left;
+  }
+}
+
+/*roadmap*/
 /*adapt*/
 @media (max-width: 768px) {
   .container-section {
