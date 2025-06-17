@@ -27,7 +27,7 @@
 }
 .title-section h1 {
   line-height: 1.8;
-  font-size: clamp(1.4rem, 6vw, 4.7rem);
+  font-size: clamp(1.4rem, 6vw, 4.5rem);
   font-weight: bold;
   margin-bottom: 10px;
 }
