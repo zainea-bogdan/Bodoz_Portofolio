@@ -1,24 +1,22 @@
-# Bodoz_Portofolio
+# Personal Portfolio Website
 
-# 🌐 Personal Portfolio Website
+A minimal static site built with HTML&CSS so far.
 
-This is my personal static website, currently serving as a simple HTML-based CV.  
-As I progress, I plan to expand it with project showcases, learning highlights, and interactive elements.
+## Features
 
-## 📄 What's Available
+- Typed text animation
+- Responsive design
+- Personal intro and image
 
-- 🧑 Curriculum Vitae — `index.html`
+## Roadmap
 
-## 🔧 Roadmap
-
-Planned future additions:
 - Project gallery
 - Blog or learning timeline
 - Contact section
-- Possibly styled with CSS or built with a static site generator
-- Updated CV version available 
+- Improved styling
 
+## Credits
 
-This site is a work in progress — more coming soon!
+- Typing effect by [Typed.js](https://github.com/mattboldt/typed.js)
 
-
+More updates coming soon. Stay Tuned
