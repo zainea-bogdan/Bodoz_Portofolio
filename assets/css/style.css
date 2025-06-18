@@ -165,7 +165,7 @@
   top: -100%;
   right: 0;
   position: absolute;
-  background: rgba(48, 48, 48, 0.507);
+  background: rgba(48, 48, 48, 0.63);
   backdrop-filter: blur(5px);
   border-radius: 15px;
   padding: 30px;
@@ -267,8 +267,7 @@
   transform: scale(1.1);
 }
 
-/*tech stack*/
-.badge-carousel {
+/* tech stack .badge-carousel {
   overflow: hidden;
   width: 100%;
   background-color: black;
@@ -294,7 +293,7 @@
   100% {
     transform: translateX(-50%);
   }
-}
+} */
 
 /*connect*/
 .other-activities-section {
