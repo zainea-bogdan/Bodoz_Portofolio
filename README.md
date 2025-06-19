@@ -1,22 +1,29 @@
-# Personal Portfolio Website
+# 💻 Personal Portfolio – Zainea Bogdan
 
-A minimal static site built with HTML&CSS so far.
+A clean, responsive personal portfolio built using **HTML, CSS, and JavaScript**, showcasing my journey, skills, and projects in tech and data.
 
-## Features
+## ✨ Features
 
-- Typed text animation
-- Responsive design
-- Personal intro and image
+- Flip-card **About Me** section with interactive profile
+- **Typed.js** animated intro headline
+- Timeline of major academic & professional **milestones**
+- Scroll-triggered animations and **project showcase cards**
+- Dynamic **badge carousel** to highlight tech stack
 
-## Roadmap
+## 🚧 Roadmap
 
-- Project gallery
-- Blog or learning timeline
-- Contact section
-- Improved styling
+- Add dark mode toggle 🌙
+- Improve mobile responsiveness further
+- Expand project gallery with filters/tags
+- Add form-based contact section or backend integration
+- Modularize codebase into components for future scaling
 
-## Credits
+## ⚙️ Tech Stack
 
-- Typing effect by [Typed.js](https://github.com/mattboldt/typed.js)
+- HTML5 + CSS3
+- Vanilla JavaScript (DOM manipulation)
+- [Typed.js](https://github.com/mattboldt/typed.js)
 
-More updates coming soon. Stay Tuned
+## 📄 Status
+
+Actively maintained – currently in **MVP** phase with regular enhancements.
