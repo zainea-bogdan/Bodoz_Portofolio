@@ -622,6 +622,45 @@
   }
 }
 
+.timeline-details {
+  margin-top: 10px;
+  background-color: #2b2b2b;
+  border-radius: 6px;
+  padding: 10px 15px;
+  border: 1px solid #444;
+}
+
+.timeline-details summary {
+  font-weight: 600;
+  color: #8fabba;
+  cursor: pointer;
+  list-style: none;
+  outline: none;
+  margin-bottom: 8px;
+  background-color: transparent;
+  text-align: center;
+}
+
+.timeline-details[open] summary::after {
+  content: " ▲";
+  float: right;
+  font-size: 0.8em;
+}
+
+.timeline-details summary::after {
+  content: " ▼";
+  float: right;
+  font-size: 0.8em;
+  transition: transform 0.3s;
+}
+
+.timeline-details p {
+  margin: 0;
+  padding-top: 5px;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
 /*first section with skill resume*/
 .skill-levels-section {
   padding: 60px 20px;
